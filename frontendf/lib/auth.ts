@@ -4,6 +4,8 @@ import axios from "axios";
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001/api";
 const API_URL = `${API_BASE_URL}/auth`;
 
+
+
 // src/lib/auth.ts
 export async function loginUser(email: string, password: string) {
   const res = await axios.post(`${API_URL}/login`, { email, password });
